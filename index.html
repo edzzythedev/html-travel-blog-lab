@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Webpage Title (Requirement: "Adventures in Fire Island") -->
+    <title>Adventures in Fire Island</title>
+    
+    <!-- Load Tailwind CSS (Utility framework for fast, responsive styling) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styling Block (Used for global settings or complex styles) -->
+    <style>
+        body {
+            /* Sets the default font and a light background color for the page */
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+        }
+        /* Custom image gallery layout (Removes default list markers and adds subtle styling) */
+        .image-gallery li {
+            list-style: none; /* Removes the default list bullet (required for clean gallery) */
+            margin: 0;
+            padding: 0;
+            border-radius: 0.5rem; /* Rounds the corners of each image item */
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow for depth */
+            transition: transform 0.3s ease-in-out; /* Smooth hover effect transition */
+        }
+        /* Hover Effect: Lifts the image slightly when the mouse is over it, indicating interactivity */
+        .image-gallery li:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <!-- Body Tag: Contains all visible content of the webpage -->
+
+    <!-- Header & Navigation Section -->
+    <header class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <!-- Webpage Main Title (Requirement: H1 for the page title) -->
+            <h1 class="text-4xl font-extrabold text-indigo-700">Adventures in Fire Island</h1>
+        </div>
+    </header>
+
+    <!-- Hero Section (Large Banner) -->
+    <!-- The role="img" and aria-label provide the required descriptive text for accessibility, 
+         replacing the alt attribute on the previous <img> tag. -->
+    <section class="relative h-96 overflow-hidden" role="img" aria-label="A beautiful large banner image showing the serene beach and dune grass scenery of Fire Island National Seashore.">
+        <!-- Banner Image Replacement: Using an inline SVG to provide a realistic visual (beach/lighthouse) 
+             without relying on external, text-generating placeholders. -->
+        <svg viewBox="0 0 1920 400" preserveAspectRatio="xMidYMid slice" class="w-full h-full object-cover" aria-hidden="true">
+            <!-- Sky (Light Blue) -->
+            <rect width="1920" height="250" fill="#87CEEB" />
+            <!-- Ocean (Deep Blue) -->
+            <rect y="180" width="1920" height="150" fill="#0077BE" />
+            <!-- Beach Sand (Yellow/Tan) -->
+            <rect y="280" width="1920" height="120" fill="#F0E68C" />
+            <!-- Dune Grass (Green/Brown Detail) -->
+            <path d="M100 280 L105 250 L110 280 Z M300 280 L305 240 L310 280 Z M700 280 L705 260 L710 280 Z M1200 280 L1205 230 L1210 280 Z" fill="#6B8E23" />
+            <!-- Stylized Lighthouse Silhouette (Fire Island Lighthouse) -->
+            <rect x="1550" y="50" width="40" height="230" fill="#333" />
+            <rect x="1540" y="40" width="60" height="10" fill="#333" />
+            <circle cx="1570" cy="50" r="10" fill="#FFD700" />
+        </svg>
+        
+        <!-- Text Overlay for the Hero Section -->
+        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+            <!-- H2 used here as H1 is already the main page title in the header -->
+            <h2 class="text-5xl font-bold text-white text-shadow-lg p-4 rounded-lg">Welcome to Fire Island!</h2>
+        </div>
+    </section>
+
+    <!-- Main Content Area: Centered and styled container for the blog post -->
+    <main class="max-w-4xl mx-auto mt-10 p-4 sm:p-6 lg:p-8 bg-white rounded-xl shadow-xl">
+
+        <!-- Blog Post Summary Section (Requirement: Short paragraph summary) -->
+        <section class="mb-10 p-6 bg-gray-50 rounded-lg">
+            <h2 class="text-3xl font-semibold text-gray-700 mb-4 border-b pb-2">Trip Highlights</h2>
+            <!-- First Paragraph: Summarizing the experience -->
+            <p class="text-lg leading-relaxed mb-4">
+                My recent trip to Fire Island National Seashore was an unforgettable escape from the mainland hustle. The park offers a unique blend of wild, protected beaches and charming car-free communities. 
+                I spent my days exploring the iconic Fire Island Lighthouse and hiking through the Sunken Forest, a rare maritime forest ecosystem that feels truly magical. The lack of cars creates an incredibly peaceful atmosphere, making the ferry ride over feel like a transition into another world.
+            </p>
+            <!-- Second Paragraph: Highlighting key features -->
+            <p class="text-lg leading-relaxed">
+                Key features included the stunning ocean views, the rustic boardwalks connecting the towns, and the chance to spot local wildlife, particularly the unique deer population. It's the perfect place for a relaxing, nature-focused adventure.
+            </p>
+        </section>
+
+        <!-- Image Gallery Section (Requirement: Gallery using <ul>/<li>/<img>) -->
+        <section class="mb-10">
+            <!-- Gallery Title (Requirement: H2 tag with "Gallery: Fire Island") -->
+            <h2 class="text-3xl font-semibold text-gray-700 mb-6 border-b pb-2">Gallery: Fire Island</h2>
+            
+            <!-- Unordered List (<ul>): The main container for the gallery items -->
+            <ul class="grid grid-cols-2 md:grid-cols-4 gap-4 image-gallery p-0">
+                <!-- Image Gallery Items (Using placeholders with descriptive text) -->
+                <li>
+                    <img 
+                        src="https://placehold.co/400x300/e9d5ff/312e81?text=Beach+Dunes" 
+                        alt="Sand dunes covered in dune grass leading to the ocean." 
+                        class="w-full h-full object-cover"
+                    />
+                </li>
+                <li>
+                    <img 
+                        src="https://placehold.co/400x300/a5b4fc/312e81?text=Boardwalk+Trail" 
+                        alt="A wooden boardwalk path winding through the trees." 
+                        class="w-full h-full object-cover"
+                    />
+                </li>
+                <li>
+                    <img 
+                        src="https://placehold.co/400x300/c7d2fe/312e81?text=Lighthouse+View" 
+                        alt="A scenic view of the tall Fire Island Lighthouse against a blue sky." 
+                        class="w-full h-full object-cover"
+                    />
+                </li>
+                <li>
+                    <img 
+                        src="https://placehold.co/400x300/93c5fd/312e81?text=Sunken+Forest" 
+                        alt="Dense, twisted trees of the Sunken Forest ecosystem." 
+                        class="w-full h-full object-cover"
+                    />
+                </li>
+            </ul>
+        </section>
+
+        <!-- Call to Action Section (Requirement: Link encouraging readers to explore) -->
+        <section class="p-6 bg-indigo-100 border-l-4 border-indigo-500 rounded-r-lg">
+            <!-- Call to Action Heading (Requirement: <h3> tag) -->
+            <h3 class="text-2xl font-bold text-indigo-700 mb-3">Explore the Adventure!</h3>
+            <!-- Call to Action Paragraph -->
+            <p class="text-lg text-gray-700 mb-4">
+                Ready to experience the unique charm and natural beauty of Fire Island for yourself? It's a national treasure waiting to be discovered.
+            </p>
+            <p>
+                <!-- Anchor Tag (<a>): Creates the hyperlink -->
+                <a 
+                    href="https://www.nps.gov/fiis/index.htm" 
+                    target="_blank" /* Opens the link in a new tab */
+                    class="inline-block bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-indigo-700 transition duration-300 shadow-lg"
+                >
+                    Plan your National Park adventure today!
+                </a>
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="mt-10 py-6 text-center text-gray-500 bg-gray-100">
+        <p>&copy; 2025 Travel Blog | Fire Island Adventure</p>
+    </footer>
+
+</body>
+</html>
